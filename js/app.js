@@ -3,7 +3,7 @@ let inputs, clock, alarm, hours, minutes, seconds, repeater;
 window.addEventListener('load', () => {
     inputs = Array.from(document.getElementsByClassName('number'));
     clock = document.querySelector('.clock');
-    alarm = new Audio('/sonido/alarma-para-despertar-3.mp3');
+    alarm = new Audio("sound/alarma.mp3");
 })
 
 function startTimer() {
@@ -22,7 +22,7 @@ function parseTime() {
 function setTimer() {
     clock.innerHTML = `<p class='number'>${hours > 9 ? hours : ('0' + hours)}</p> <span> hs</span> <p class='number'>${minutes > 9 ? minutes : ('0' + minutes)}</p><span>min</span><p class='number'>${seconds > 9 ? seconds : ('0' + seconds)}</p> <span > sec</span >`
 
-    document.title = `${hours>9?hours:('0'+hours)}:${minutes>9?minutes:('0'+minutes)}:${seconds>9?seconds:('0'+seconds)}:`
+    document.title = `${hours>9?hours:('0'+hours)}:${minutes>9?minutes:('0'+minutes)}:${seconds>9?seconds:('0'+seconds)} `
 };
 
 function countdown() {
