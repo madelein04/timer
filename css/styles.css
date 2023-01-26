@@ -16,20 +16,25 @@ body {
     align-items: center;
     height: 100%;
     font-family: 'Roboto';
-    background: linear-gradient(90deg, rgb(123, 0, 255) 0%, rgb(13, 0, 255) 150%)
+    background: linear-gradient(90deg, rgba(123, 0, 255, 0.362) 0%, rgba(13, 0, 255, 0.811) 150%)
 }
 
+/* CSS */
 .container {
+    border: 1px rgba(146, 160, 251, 0.337) solid;
+    border-radius: 20px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(146, 160, 251, 0.337);
+    box-shadow: rgb(0, 0, 0) 4px 4px 0 0, #000 4px 4px 0 1px;
 }
 
 .clock {
     font-size: 32px;
-    text-shadow: -1px 0px 15px black;
-    color: lightgray;
+    font-family: 'Roboto';
 }
 
 .number {
@@ -38,9 +43,7 @@ body {
     font-size: 128px;
     font-family: 'Roboto';
     text-align: center;
-    text-shadow: -1px 0px 15px black;
     border: none;
-    color: lightgray;
     background-color: transparent;
 }
 
@@ -93,4 +96,36 @@ body {
     background-image: url(/css/img/stop_circle_FILL0_wght400_GRAD0_opsz48.svg);
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media (max-height: 1000px) {
+    .container {
+        padding: 12px 20px;
+    }
+
+    .clock {
+        font-size: 22px;
+        font-family: 'Roboto';
+    }
+
+    .number {
+        width: 50px;
+        font-size: 38px;
+    }
+}
+
+@media (max-height: 700px) {
+    .container {
+        padding: 12px 8px;
+    }
+
+    .clock {
+        font-size: 20px;
+        font-family: 'Roboto';
+    }
+
+    .number {
+        width: 50px;
+        font-size: 34px;
+    }
 }
